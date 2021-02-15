@@ -1404,6 +1404,11 @@
   "resolved" "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz"
   "version" "1.1.3"
 
+"@ovalmoney/react-native-fitness@^0.5.2":
+  "integrity" "sha512-vETojI5gClEBUfPqQOyeGMv5xFUO2svprc5UWAeHkI2FlNaF3zknJNR6grVuvgngdcCrnQQkQ69wuZl8F5JH7A=="
+  "resolved" "https://registry.npmjs.org/@ovalmoney/react-native-fitness/-/react-native-fitness-0.5.2.tgz"
+  "version" "0.5.2"
+
 "@reach/router@^1.2.1":
   "integrity" "sha512-+mtn9wjlB9NN2CNnnC/BRYtwdKBfSyyasPYraNAyvaV1occr/5NnB4CVzjEZipNHwYebQwcndGUmpFzxAUoqSA=="
   "resolved" "https://registry.yarnpkg.com/@reach/router/-/router-1.3.4.tgz"
@@ -10508,7 +10513,7 @@
   "resolved" "https://registry.yarnpkg.com/react-native-swipe-gestures/-/react-native-swipe-gestures-1.0.5.tgz"
   "version" "1.0.5"
 
-"react-native@*", "react-native@^0.62.0", "react-native@>=0.14.0 <1", "react-native@>=0.40.0", "react-native@>=0.56.0", "react-native@>=0.57", "react-native@>=0.57.0", "react-native@>=0.59", "react-native@>=0.62.0-rc.0 <0.64.0", "react-native@0.63.2":
+"react-native@*", "react-native@^0.62.0", "react-native@>=0.14.0 <1", "react-native@>=0.40.0", "react-native@>=0.41.2", "react-native@>=0.56.0", "react-native@>=0.57", "react-native@>=0.57.0", "react-native@>=0.59", "react-native@>=0.62.0-rc.0 <0.64.0", "react-native@0.63.2":
   "integrity" "sha512-MkxHeJorUDzmQwKJrTfrFYMDRLyu9GSBpsFFMDX7X+HglVnaZi3CTzW2mRv1eIcazoseBOP2eJe+bnkyLl8Y2A=="
   "resolved" "https://registry.yarnpkg.com/react-native/-/react-native-0.63.2.tgz"
   "version" "0.63.2"

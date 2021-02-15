@@ -1,32 +1,47 @@
-import React from "react"
+import React, { useCallback } from "react"
 import { ViewStyle, TextStyle } from "react-native"
 import { observer } from "mobx-react-lite"
 import { Screen, Text } from "../../components"
 import { color, spacing, typography } from "../../theme"
+import Fitness from "@ovalmoney/react-native-fitness"
 
 const CONTAINER: ViewStyle = {
   backgroundColor: color.transparent,
   paddingHorizontal: spacing[4],
 }
-const TEXT: TextStyle = {
-  color: color.palette.white,
+
+const TXT: TextStyle = {
   fontFamily: typography.primary,
-}
-const CONTENT: TextStyle = {
-  ...TEXT,
-  color: "#BAB6C8",
+  color: "green",
   fontSize: 15,
-  lineHeight: 22,
-  marginBottom: spacing[5],
+  padding: 10,
+  marginBottom: 5,
+  backgroundColor: "pink",
 }
 
 export const WelcomeScreen = observer(function WelcomeScreen() {
+  const permissions = [
+    { kind: Fitness.PermissionKinds.Steps, access: Fitness.PermissionAccesses.Read },
+  ]
+
+  const requestPermissions = useCallback(() => {
+    return Fitness.requestPermissions(permissions).then((requestPermissions) => {
+      // Do something
+      console.log({ requestPermissions })
+    })
+  }, [permissions])
+
+  const isAuthorized = useCallback(() => {
+    return Fitness.isAuthorized(permissions).then((isAuthorized) => {
+      // Do something
+      console.log({ isAuthorized })
+    })
+  }, [permissions])
+
   return (
     <Screen style={CONTAINER} preset="fixed" backgroundColor={color.transparent}>
-      <Text style={CONTENT}>
-        For everyone else, this is where you'll see a live preview of your fully functioning app
-        using Ignite.
-      </Text>
+      <Text style={TXT} text="requestPermissions" onPress={requestPermissions} />
+      <Text style={TXT} text="isAuthorized" onPress={isAuthorized} />
     </Screen>
   )
 })
